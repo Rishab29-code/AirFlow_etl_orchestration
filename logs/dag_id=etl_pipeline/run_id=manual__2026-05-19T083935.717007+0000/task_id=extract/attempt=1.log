@@ -1,0 +1,21 @@
+[2026-05-19T08:40:13.501+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-19T08:40:13.616+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline.extract manual__2026-05-19T08:39:35.717007+00:00 [queued]>
+[2026-05-19T08:40:13.646+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline.extract manual__2026-05-19T08:39:35.717007+00:00 [queued]>
+[2026-05-19T08:40:13.649+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-05-19T08:40:13.692+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract> on 2026-05-19 08:39:35.717007+00:00
+[2026-05-19T08:40:13.725+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=538) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-05-19T08:40:13.730+0000] {standard_task_runner.py:64} INFO - Started process 540 to run task
+[2026-05-19T08:40:13.732+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline', 'extract', 'manual__2026-05-19T08:39:35.717007+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmp1zea26n9']
+[2026-05-19T08:40:13.738+0000] {standard_task_runner.py:91} INFO - Job 8: Subtask extract
+[2026-05-19T08:40:13.980+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_pipeline.extract manual__2026-05-19T08:39:35.717007+00:00 [running]> on host 158a6012f4a0
+[2026-05-19T08:40:14.447+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_pipeline' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2026-05-19T08:39:35.717007+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-19T08:39:35.717007+00:00'
+[2026-05-19T08:40:14.464+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-19T08:40:14.480+0000] {logging_mixin.py:188} INFO - Extracting data...
+[2026-05-19T08:40:14.482+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-05-19T08:40:14.486+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-19T08:40:14.535+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_pipeline, task_id=extract, run_id=manual__2026-05-19T08:39:35.717007+00:00, execution_date=20260519T083935, start_date=20260519T084013, end_date=20260519T084014
+[2026-05-19T08:40:14.755+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-05-19T08:40:14.954+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-19T08:40:14.971+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
