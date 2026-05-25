@@ -101,7 +101,7 @@ services:
       start_period: 5s
     restart: always
     ports:
-      - "5432:5432"
+      - "5433:5432"
 
   redis:
     # Redis is limited to 7.2-bookworm due to licencing change
